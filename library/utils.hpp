@@ -9,6 +9,5 @@
 #include <fstream>
 
 std::vector<std::string> get_file_text(std::ifstream input_file);
-std::string get_line();
-bool is_final_text(const std::vector<std::string>&text);
-void read_char(char c);
+void tokenize(char current);
+void digit_token(char c);

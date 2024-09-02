@@ -4,8 +4,10 @@
 #endif //LEXICAL_DEFINITIONS_HPP
 #include <iostream>
 #include <string>
+#include <variant>
+
 namespace lexical{
-    enum class TokenSymbol : char {
+    enum class TokenSymbol {
         programa,
         inicio,
         fim,
@@ -46,14 +48,8 @@ namespace lexical{
         falso
     };
 
-    class Token{
-    public:
-        std::string lexical;
-        TokenSymbol symbol;
-    };
-
     enum class State{
-        Comment_active,
-        Reading_lexeme
+        Reading_lexeme,
+        Comment_active
     };
 }
